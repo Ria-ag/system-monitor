@@ -20,7 +20,7 @@ def anomaly_detector(lst):
         anomalies.append("normal")
     df_anomaly = pd.DataFrame({"f1_score":lst, "anomaly":anomalies}, columns=["f1_score", "anomaly"])
     return df_anomaly
-df = pd.read_csv("utilities/runs (5).csv")
+df = pd.read_csv("runs (5).csv")
 df = df.drop(['Duration', 'Run ID', 'Source Type', 'Source Name', 'User', 'Status', 'Name', 'batch_size', 'eval_frequency', 'initial_rate', 'max_steps', 'model_name', 'optimizers', 'section_model', 'size', 'model_flavor'], axis=1)
 df_entire_resume = df[df['section'] == "entire_resume"]
 df_entire_resume = df_entire_resume.drop(['AWARDS_f1_score', 'AWARDS_precision', 'AWARDS_recall', 'Address_f1_score', 'Address_precision', 'Address_recall', 'GITHUB_URL_f1_score', 'GITHUB_URL_precision', 'GITHUB_URL_recall', 'LinkedIn URL_f1_score', 'LinkedIn URL_precision', 'LinkedIn URL_recall', 'SUMMARY_f1_score', 'SUMMARY_precision', 'SUMMARY_recall'], axis = 1)
