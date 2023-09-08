@@ -160,11 +160,11 @@ elif button_2:
         plt = sns.scatterplot(x=anomaly_df.index, y=anomaly_df['f1_score'], hue=anomaly_df['anomaly'])
         st.pyplot(fig_8)
 elif button_3:
-    image = Image.open('utilities/system_health.png')
+    image = Image.open('system_health.png')
     st.image(image, caption='System health')
 elif button_4:
-    f_1 = open('utilities/dataset_0.6954225242382301.json')
-    f_2 = open('utilities/dataset_0.7436912184166055.json')
+    f_1 = open('dataset_0.6954225242382301.json')
+    f_2 = open('dataset_0.7436912184166055.json')
     data_1 = json.load(f_1)
     data_2 = json.load(f_2)
     count_dict_1 = {}
@@ -304,8 +304,8 @@ elif button_4:
         plt.legend()
         st.pyplot(fig_12)
 elif button_5:
-    f_1 = open('utilities/dataset_0.7436912184166055.json')
-    f_2 = open('utilities/validation.json')
+    f_1 = open('dataset_0.7436912184166055.json')
+    f_2 = open('validation.json')
     data_1 = json.load(f_1)
     data_2 = json.load(f_2)
     count_dict_1 = {}
@@ -460,9 +460,9 @@ elif button_5:
         plt.legend()
         st.pyplot(fig_11)
 elif button_6:
-    img = Image.open("utilities/logo-tech-white.png")
+    img = Image.open("logo-tech-white.png")
     st.write("A project by People Tech Group that analyzes and scores resumes. ")
 else:
-    image = Image.open('utilities/system_health.png')
+    image = Image.open('system_health.png')
     st.image(image, caption='System health')
 
